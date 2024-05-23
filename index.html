@@ -201,17 +201,6 @@
             observed in challenging real-life videos, thanks to object-scene decomposition and a motion
             factorization scheme.
           </p>
-          <!-- <p>
-            First, we utilize large pre-trained models to decompose the video scene by segmenting, tracking,
-            and amodally completing the visible part of each object in the scene. Each object track is
-            mapped to a set of 3D Gaussians that deform and move in space and time.
-          </p>
-          <p>
-            To handle complex object motions, we propose to factorize the object motions into three components:
-            camera motion, object-centric deformations, and object-centric to world-frame transformations. Finally,
-            we re-compose the objects and optimize for relative object scales using monocular
-            depth prediction guidance. 
-          </p> -->
           <p>
             DreamScene4D can generate arbitrary novel views for dynamic multi-object scenes across occlusions,
             as well as enable 2D point motion tracking by projecting the inferred 3D Gaussian trajectories to
@@ -220,18 +209,24 @@
           <!--/ Abstract. -->
           <br />
           <!-- Overview. -->
-            <img src="static/images/method.png" style='height: 100%; width: 100%; object-fit: contain'/>
-            <p>
-              <small>
-                <b>(a)</b> We decompose and amodally complete objects and the background in the video,
-                then use <a href="https://dreamgaussian.github.io/">DreamGaussian</a> to obtain static
-                3D Gaussian representations.
-                <b>(b)</b> Next, we factorize the object motion into multiple components and optimize them
-                independently.
-                <b>(c)</b> Finally, we re-compose the objects using monocular depth prediction guidance. 
-              </small>
-            </p>
-          </div>
+          <img src="static/images/method.png" style='height: 100%; width: 100%; object-fit: contain'/>
+          <p>
+            <small>
+              <b>(a)</b> We decompose and amodally complete objects and the background in the video,
+              then use <a href="https://dreamgaussian.github.io/">DreamGaussian</a> to obtain static
+              3D Gaussian representations.
+              <b>(b)</b> Next, we factorize the object motion into multiple components and optimize them
+              independently.
+              <b>(c)</b> Finally, we re-compose the objects using monocular depth prediction guidance. 
+            </small>
+          </p>
+        </div>
+        <!-- <h2 class="title is-3">Video</h2>
+        <div class="content has-text-justified">
+          <video poster="" id="results-showcase" autoplay controls muted loop playsinline height="100%" style="overflow:hidden">
+            <source src="./static/videos/result_showcase.mp4" type="video/mp4">
+          </video>
+        </div> -->
       </div>
     </div>
   </div>
@@ -297,6 +292,36 @@
                   <td style="padding-right:1%;width:25%;vertical-align:middle">
                     <video poster="" id="Dogs-Jump-elev-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
                       <source src="./static/videos/Dogs-Jump Composed Elev Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="item item-Animal Fighting">
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:1%;margin-bottom:1%;">
+                <tr style="padding:0px">
+                  <td style="padding-left:1%;padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Animal Fighting-orig" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
+                      <source src="./static/videos/Animal Fighting.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Animal Fighting-no-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #008ada; overflow:hidden">
+                      <source src="./static/videos/Animal Fighting Composed No Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Animal Fighting-hor-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
+                      <source src="./static/videos/Animal Fighting Composed Hor Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Animal Fighting-elev-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
+                      <source src="./static/videos/Animal Fighting Composed Elev Orbit.mp4"
                               type="video/mp4">
                     </video>
                   </td>
@@ -513,6 +538,36 @@
                 </tr>
               </table>
             </div>
+            <div class="item item-Two Cats">
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:1%;margin-bottom:1%;">
+                <tr style="padding:0px">
+                  <td style="padding-left:1%;padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Two Cats-orig" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
+                      <source src="./static/videos/Two Cats.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Two Cats-no-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #008ada; overflow:hidden">
+                      <source src="./static/videos/Two Cats Composed No Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Two Cats-hor-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
+                      <source src="./static/videos/Two Cats Composed Hor Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Two Cats-elev-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
+                      <source src="./static/videos/Two Cats Composed Elev Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                </tr>
+              </table>
+            </div>
             <div class="item item-Kid-Football">
               <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:1%;margin-bottom:1%;">
                 <tr style="padding:0px">
@@ -567,6 +622,36 @@
                   <td style="padding-right:1%;width:25%;vertical-align:middle">
                     <video poster="" id="Stacking-elev-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
                       <source src="./static/videos/Stacking Composed Elev Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="item item-Rabbits">
+              <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:1%;margin-bottom:1%;">
+                <tr style="padding:0px">
+                  <td style="padding-left:1%;padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Rabbits-orig" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; overflow:hidden">
+                      <source src="./static/videos/Rabbits.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Rabbits-no-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #008ada; overflow:hidden">
+                      <source src="./static/videos/Rabbits Composed No Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Rabbits-hor-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
+                      <source src="./static/videos/Rabbits Composed Hor Orbit.mp4"
+                              type="video/mp4">
+                    </video>
+                  </td>
+                  <td style="padding-right:1%;width:25%;vertical-align:middle">
+                    <video poster="" id="Rabbits-elev-demo" autoplay controls muted loop playsinline height="100%" style="border-radius:18px; border: 5px solid #da8300; overflow:hidden">
+                      <source src="./static/videos/Rabbits Composed Elev Orbit.mp4"
                               type="video/mp4">
                     </video>
                   </td>
